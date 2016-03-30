@@ -1,0 +1,27 @@
+{
+    "name": "smarty/smarty",
+    "type": "library",
+    "description": "Smarty - the compiling PHP template engine",
+    "keywords": ["templating"],
+    "homepage": "http://www.smarty.net",
+    "license": "LGPL-3.0",
+    "authors": [
+        {
+            "name": "Magnus Kruschwitz",
+            "email": "magnus.kruschwitz@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.2"
+    },
+    "autoload": {
+        "classmap": [
+            "engine/lib/smarty/Smarty.class.php",
+            "engine/lib/smarty/SmartyBC.class.php",
+            "engine/lib/smarty/sysplugins/",
+            "engine/lib/smarty/plugins/",
+            "engine/lib/smarty/Autoloader.php",
+            "engine/lib/smarty/debug.tpl"
+        ]
+    }
+}
