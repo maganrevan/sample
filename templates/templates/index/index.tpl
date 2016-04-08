@@ -1,7 +1,13 @@
 <!doctype>
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+    </head>
     <body>
-        <h1>YAY ES GEHT</h1>
+        <header></header>
+        <main>
+            <h1>YAY ES GEHT</h1>
+        </main>
+        <footer></footer>
     </body>
 </html>
