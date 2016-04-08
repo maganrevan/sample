@@ -21,7 +21,7 @@ class view extends abstractView{
         $this->debug = $debug;
         
         parent::__construct($this->model, $this->controller, $this->debug);
-        
+
         $this->initTemplate();
     }
     

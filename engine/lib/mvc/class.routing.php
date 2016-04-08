@@ -23,21 +23,8 @@ class routing {
 
     public function __construct() {
         $this->model = new model();
-        if ($_GET) {
-            switch ($_GET['cat']) {
-                case 'index':
-                    require_once 'controller/class.indexController.php';
-                    $this->controller = new indexController($this->model);
-
-                    break;
-                default:
-                    $this->controller = 'error';
-                    break;
-            }
-        } else {
-            require_once 'controller/class.indexController.php';
-            $this->controller = new indexController($this->model);
-        }
+        require_once 'controller/class.indexController.php';
+        $this->controller = new indexController($this->model);
 
         $this->view = new view($this->model, $this->controller, FALSE);
     }
