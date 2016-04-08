@@ -21,5 +21,19 @@ class view extends abstractView{
         $this->debug = $debug;
         
         parent::__construct($this->model, $this->controller, $this->debug);
+        
+        $this->initTemplate();
+    }
+    
+    protected function initTemplate(){
+        switch ($this->controller->getControllerName()) {
+            case "index":
+                $this->view->display('index/index.tpl');
+                break;
+
+            default:
+                die($this->controller->getControllerName());
+                break;
+        }
     }
 }

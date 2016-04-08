@@ -18,6 +18,6 @@ class indexController extends abstractController{
     public function __construct($model) {
         $this->model = $model;
         parent::__construct($this->model);
-        echo "Dies ist ein Test";
+        $this->controllerName = 'index';
     }
 }

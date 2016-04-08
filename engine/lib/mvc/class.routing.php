@@ -15,6 +15,7 @@ require_once 'model/class.model.php';
 require_once 'view/class.view.php';
 
 class routing {
+
     protected $index;
     protected $controller;
     protected $model;
@@ -22,34 +23,35 @@ class routing {
 
     public function __construct() {
         $this->model = new model();
-        if($_GET){
-            switch ($_GET['cat']){
+        if ($_GET) {
+            switch ($_GET['cat']) {
                 case 'index':
                     require_once 'controller/class.indexController.php';
                     $this->controller = new indexController($this->model);
-                    
+
                     break;
                 default:
                     $this->controller = 'error';
                     break;
             }
+        } else {
+            require_once 'controller/class.indexController.php';
+            $this->controller = new indexController($this->model);
         }
-        else{
-            $this->controller = "index";
-        }
-        
+
         $this->view = new view($this->model, $this->controller, FALSE);
     }
-    
-    public function getController(){
+
+    public function getController() {
         return $this->controller;
     }
-    
-    public function getModel(){
+
+    public function getModel() {
         return $this->model;
     }
-    
-    public function getView(){
+
+    public function getView() {
         return $this->view;
     }
+
 }

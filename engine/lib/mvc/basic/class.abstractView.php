@@ -28,7 +28,7 @@ class abstractView {
         $this->defineTemplatePaths();
         
         $this->view->debugging = $this->debug;
-        
+                
     }
 
     public function __destruct() {

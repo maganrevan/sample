@@ -14,8 +14,14 @@
  */
 class abstractController {
     protected $modal;
-    
+    protected $controllerName;
+
+
     public function __construct($model) {
         $this->modal = $model;
+    }
+    
+    public function getControllerName(){
+        return $this->controllerName;
     }
 }
